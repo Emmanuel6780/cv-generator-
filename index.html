@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CVForge - Unlock Your Career Potential</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 class="headline">
+        Unlock <span>Your Career</span> <br> Potential Today
+      </h1>
+      <p class="subheadline">
+        A fast and easy way to create your professional CV. Start your journey now!
+      </p>
+      <button class="cta-button" onclick="startGenerator()">Get Started</button>
+    </div>
+  </div>
+
+  <script>
+    // GSAP Animation for Hero Section
+    gsap.from(".headline span", {
+      opacity: 0,
+      y: 20,
+      duration: 1.2,
+      ease: "power2.out"
+    });
+
+    gsap.from(".subheadline", {
+      opacity: 0,
+      y: 30,
+      duration: 1.5,
+      delay: 0.4,
+      ease: "power2.out"
+    });
+
+    gsap.from(".cta-button", {
+      opacity: 0,
+      scale: 0.8,
+      duration: 1,
+      delay: 0.8,
+      ease: "bounce.out"
+    });
+
+    // Button Redirect Function
+    function startGenerator() {
+      window.location.href = "get-started.html";
+    }
+  </script>
+</body>
+</html>
